@@ -26,16 +26,8 @@
             margin-bottom: 20px;
         }
 
-        .logo-box h1 {
-            font-size: 2rem;
-            font-weight: bold;
-            color: #fff;
-            letter-spacing: 2px;
-            text-transform: uppercase;
-        }
-
+        .logo-box h1 { font-size: 2rem; font-weight: bold; color: #fff; letter-spacing: 2px; text-transform: uppercase; }
         .logo-box span { color: #ff0000; }
-
         h2 { font-size: 1.4rem; color: #fff; margin-bottom: 15px; }
         p { color: #aaa; font-size: 1rem; line-height: 1.6; margin-bottom: 20px; }
         
@@ -59,45 +51,33 @@
 <body>
 
     <div class="gateway-container">
-        <div class="logo-box">
-            <h1>FilmyDub<span>4u</span></h1>
-        </div>
-        
+        <div class="logo-box"><h1>FilmyDub<span>4u</span></h1></div>
         <h2>Link Is Ready!</h2>
         <p>Click the button below to watch or download your selected movie / drama movie file.</p>
-        
         <button class="btn-unlock" onclick="startEarningRedirect()">Unlock Link</button>
     </div>
 
     <script>
         function startEarningRedirect() {
+            // 1. Aap ka asli Adsterra Direct Link
             var adLink = "https://effectivecpmnetwork.com"; 
 
-            // Secure Extraction Matrix for Long URLs
-            var currentUrl = window.location.href;
-            var defaultDestination = "https://new1.hdhub4u.cl/?utm=mn1";
-            var finalDestination = defaultDestination;
+            // 2. Exact dynamic tracking system
+            const urlParams = new URLSearchParams(window.location.search);
+            const targetMovie = urlParams.get('m');
+            var finalDestination = targetMovie ? decodeURIComponent(targetMovie) : "https://hdhub4u.cl";
 
-            if (currentUrl.includes("?m=")) {
-                // Link partition system to handle query conflicts
-                var urlParts = currentUrl.split("?m=");
-                if (urlParts.length > 1) {
-                    var rawMovieUrl = urlParts[1];
-                    // Clean decode sequence to fix folder break loop
-                    finalDestination = decodeURIComponent(rawMovieUrl);
-                }
-            }
+            // 100% Anti-Blocker System: Pehle same tab mein redirect mapping save hogi
+            window.history.replaceState(null, null, window.location.pathname);
+            
+            // Background history back lock setup taake user back kare to movie khulay
+            window.location.hash = "movie-download";
+            window.onhashchange = function() {
+                window.location.href = finalDestination;
+            };
 
-            // Fallback safety layer
-            if (!finalDestination.startsWith("http")) {
-                finalDestination = defaultDestination;
-            }
-
-            // Open high-CPM Adsterra direct link
-            window.open(adLink, '_blank');
-
-            // Redirect user window to exact target movie menu
-            window.location.href = finalDestination;
+            // Direct action forced open in same window to completely bypass popup blockers
+            window.location.href = adLink;
         }
     </script>
 
