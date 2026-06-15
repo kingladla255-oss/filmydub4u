@@ -250,26 +250,28 @@
         // 🔄 YAHAN APNE SARE (5) ADSTERRA DIRECT LINKS DAALEIN 🔄
         var adLinks = [
             "https://www.effectivecpmnetwork.com/enzcd21ss?key=fbd7e18c2b59cc217308eecdd2cb2b6e",
-            "https://www.effectivecpmnetwork.com/n285fsaxti?key=cb17195d1d755e9f53224d58d7269af3",                                          // 2. Link 2
-            "https://www.effectivecpmnetwork.com/mznmxga9d?key=66d627dd9f9fff9c7ba5518f6a45423d",                                           // 3. Link 3
-            "https://www.effectivecpmnetwork.com/a3t7f5jc?key=3428b2f213973fca4fa96c5f02ef186c",                                          // 4. Link 4
-            "https://www.effectivecpmnetwork.com/dyzjaghi4?key=bf458a991c954d602c8f8d87a1c12d92"                                         // 5. Link 5
+            "https://www.effectivecpmnetwork.com/n285fsaxti?key=cb17195d1d755e9f53224d58d7269af3",                                          // Link 2
+            "https://www.effectivecpmnetwork.com/mznmxga9d?key=66d627dd9f9fff9c7ba5518f6a45423d",                                           // Link 3
+            "https://www.effectivecpmnetwork.com/a3t7f5jc?key=3428b2f213973fca4fa96c5f02ef186c",                                          // Link 4
+            "https://www.effectivecpmnetwork.com/dyzjaghi4?key=bf458a991c954d602c8f8d87a1c12d92"                                         // Link 5
         ];
 
         // Yeh line in 5 links mein se har click par automatic random ad uthayegi
         var randomAd = adLinks[Math.floor(Math.random() * adLinks.length)];
 
-        // Target site reader parameters config
+        // Target source parameter control layer configuration
         const urlParams = new URLSearchParams(window.location.search);
         const targetMovie = urlParams.get('m');
+        
+        // Exact default portal structure mapping logic
         var finalDestination = targetMovie ? decodeURIComponent(targetMovie) : "https://new1.hdhub4u.cl/?utm=mn1";
 
         alert("Sponsor Ad is opening! Press back button after 3 seconds to access your movie file.");
 
-        // Open randomized premium ad and redirect to main file setup
+        // Forced open script to completely bypass browser strict checks
         window.open(randomAd, '_blank');
         window.location.href = finalDestination;
     }
-    </script>
+</script>
 </body>
 </html>
