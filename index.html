@@ -1,0 +1,265 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FilmyDub4u Official - Download Movies, Dramas & Webseries</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Arial', sans-serif;
+        }
+
+        body {
+            background-color: #0b0b0b;
+            color: #fff;
+            text-align: center;
+        }
+
+        /* Top Navbar (HDHub4u Style) */
+        .header-nav {
+            background-color: #000;
+            padding: 15px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border-bottom: 2px solid #222;
+        }
+
+        /* Stylish Logo with HDHub4u Font Feel */
+        .logo-box {
+            border: 2px solid #ffb400;
+            padding: 5px 15px;
+            border-radius: 4px;
+            display: inline-block;
+        }
+
+        .logo-box h1 {
+            font-size: 2.2rem;
+            font-weight: bold;
+            color: #fff;
+            letter-spacing: 2px;
+            text-transform: uppercase;
+        }
+
+        .logo-box span {
+            color: #ff0000;
+        }
+
+        /* Sub-Header Toolbar with Search */
+        .toolbar {
+            background-color: #161616;
+            padding: 12px 15px;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            gap: 12px;
+            border-bottom: 1px solid #252525;
+        }
+
+        .category-badge {
+            background-color: #ffb400;
+            color: #000;
+            padding: 10px 20px;
+            font-weight: bold;
+            border-radius: 4px;
+            font-size: 0.95rem;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+            width: 100%;
+            max-width: 400px;
+        }
+
+        .search-container {
+            width: 100%;
+            max-width: 400px;
+        }
+
+        .search-container input {
+            width: 100%;
+            padding: 12px 15px;
+            background-color: #fff;
+            border: none;
+            border-radius: 4px;
+            color: #000;
+            font-size: 0.95rem;
+            outline: none;
+        }
+
+        /* Replica Alert Box from Screenshot */
+        .alert-box {
+            background-color: #171212;
+            border: 1px solid #ff3333;
+            border-radius: 6px;
+            max-width: 600px;
+            margin: 20px 15px 15px 15px;
+            padding: 15px;
+            font-size: 0.95rem;
+            line-height: 1.5;
+            box-shadow: 0px 0px 15px rgba(255, 0, 0, 0.1);
+            display: inline-block;
+        }
+
+        .alert-box .warning-title {
+            color: #ffb400;
+            font-weight: bold;
+            display: block;
+            margin-bottom: 5px;
+        }
+
+        .alert-box a {
+            color: #3399ff;
+            text-decoration: none;
+            font-weight: bold;
+        }
+
+        /* Section Heading */
+        .section-title {
+            text-align: left;
+            max-width: 900px;
+            margin: 20px auto 10px auto;
+            padding-left: 15px;
+            font-size: 1.3rem;
+            font-weight: bold;
+            color: #fff;
+            border-left: 4px solid #ffb400;
+        }
+
+        /* Three Custom Grid Boxes */
+        .container {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            gap: 20px;
+            padding: 10px 15px 60px 15px;
+            max-width: 450px;
+            margin: 0 auto;
+        }
+
+        /* Offline-Friendly Cinematic Gradient Box Layout */
+        .box {
+            width: 100%;
+            height: 150px;
+            border-radius: 6px;
+            border: 1px solid #333;
+            cursor: pointer;
+            transition: all 0.2s ease-in-out;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.8);
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            gap: 8px;
+        }
+
+        /* Dark Premium High-Contrast Gradients */
+        .box.movies-bg {
+            background: linear-gradient(135deg, #1f1c2c, #928dab);
+            border-left: 5px solid #ffb400;
+        }
+
+        .box.drama-bg {
+            background: linear-gradient(135deg, #2c3e50, #000000);
+            border-left: 5px solid #ff3333;
+        }
+
+        .box.series-bg {
+            background: linear-gradient(135deg, #0f2027, #203a43);
+            border-left: 5px solid #3399ff;
+        }
+
+        .box:hover {
+            transform: scale(1.02);
+            filter: brightness(1.2);
+        }
+
+        .box h2 {
+            font-size: 1.8rem;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            color: #fff;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.8);
+        }
+
+        .box .icon {
+            font-size: 2rem;
+        }
+
+        /* Footer */
+        footer {
+            padding: 20px;
+            color: #555;
+            font-size: 0.85rem;
+            border-top: 1px solid #1c1c1c;
+            background-color: #000;
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Main Navigation / Logo -->
+    <div class="header-nav">
+        <div class="logo-box">
+            <h1>FilmyDub<span>4u</span></h1>
+        </div>
+    </div>
+
+    <!-- Sub Header Toolbar -->
+    <div class="toolbar">
+        <div class="category-badge">☰ 4K Movies</div>
+        <div class="search-container">
+            <input type="text" placeholder="Search here...">
+        </div>
+    </div>
+
+    <!-- Official Style Notification Alert Box -->
+    <div class="alert-box">
+        <span class="warning-title">✕ Avoid FAKE Copies of FilmyDub4u on Google</span>
+        Always use <a href="#">FilmyDub4u.Tv</a> | <a href="#">FilmyDub4u.med</a> With VPN to get Official Domain & Follow us on <a href="#">WhatsApp</a> 🚀 For Latest Updates.
+    </div>
+
+    <!-- Section Heading -->
+    <div class="section-title">Latest Categories</div>
+
+    <!-- Three Main Operational Boxes with Offline Gradients -->
+    <div class="container">
+        <div class="box movies-bg" onclick="handleRedirection()">
+            <div class="icon">🎬</div>
+            <h2>Movies</h2>
+        </div>
+        <div class="box drama-bg" onclick="handleRedirection()">
+            <div class="icon">🎭</div>
+            <h2>Drama</h2>
+        </div>
+        <div class="box series-bg" onclick="handleRedirection()">
+            <div class="icon">📺</div>
+            <h2>Webseries</h2>
+        </div>
+    </div>
+
+    <footer>
+        <p>&copy; 2026 FilmyDub4u Official. All Rights Reserved.</p>
+    </footer>
+
+    <script>
+        function handleRedirection() {
+            // 1. Is line mein double quotes ke andar apna Adsterra Direct Link lagaen
+            var adLink = "https://example-adsterra-direct-link.com"; 
+            
+            // 2. Exact correct parameter link update kar diya gaya hai
+            var targetWebsite = "https://new1.hdhub4u.cl/?utm=mn1";
+
+            // New tab mein Adsterra ka ad khulega
+            window.open(adLink, '_blank');
+
+            // Same tab (peeche) direct work karne wale final screen par redirect ho jayega
+            window.location.href = targetWebsite;
+        }
+    </script>
+
+</body>
+</html>
