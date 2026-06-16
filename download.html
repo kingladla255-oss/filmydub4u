@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Loading your Content...</title>
+
+    <!-- Aapka Sahi Adsterra Popunder Code -->
+    <script type='text/javascript' src='//://effectivecpmnetwork.com'></script>
+
+</head>
+<body style="background-color: #111; color: white; font-family: Arial, sans-serif; text-align: center; padding-top: 100px;">
+
+    <h2 style="font-size: 24px; margin-bottom: 10px;">Your Content is Loading...</h2>
+    <p style="color: #aaa; margin-bottom: 30px;">Please wait a few seconds while we safely redirect you.</p>
+
+    <!-- Timer Button -->
+    <div style="margin: 30px 0;">
+      <button id="redirectBtn" style="padding: 15px 30px; font-size: 18px; background-color: #e50914; color: white; border: none; border-radius: 8px; cursor: pointer; font-weight: bold; min-width: 250px; box-shadow: 0 4px 15px rgba(229,9,20,0.3); transition: 0.3s;">
+        Please Wait (15s)
+      </button>
+    </div>
+
+    <!-- JavaScript code jo timer chalaye ga aur link redirect kare ga -->
+    <script>
+      const urlParams = new URLSearchParams(window.location.search);
+      const destination = urlParams.get('url');
+
+      if (!destination) {
+         window.location.href = "index.html"; 
+      }
+
+      var secondsLeft = 15; 
+      var btn = document.getElementById("redirectBtn");
+      btn.disabled = true;
+
+      var countdown = setInterval(function() {
+        secondsLeft--;
+        if (secondsLeft > 0) {
+          btn.innerText = "Generating Link (" + secondsLeft + "s)...";
+          btn.style.backgroundColor = "#555555";
+          btn.style.boxShadow = "none";
+        } else {
+          clearInterval(countdown);
+          btn.innerText = "Click Here to Proceed";
+          btn.style.backgroundColor = "#2db742";
+          btn.style.boxShadow = "0 4px 15px rgba(45,183,66,0.3)";
+          btn.disabled = false;
+        }
+      }, 1000);
+
+      btn.addEventListener("click", function() {
+        window.open(destination, '_blank'); 
+      });
+    </script>
+</body>
+</html>
